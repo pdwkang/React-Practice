@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+class Triangle {
+	constructor(sideA, sideB, sideC){
+		this.sideA = sideA
+		this.sideB = sideB
+		this.sideC = sideC
+		this.s = (sideA+sideB+sideC)/2
+	};
+	get area(){
+		return Math.sqrt((this.s)*(this.s-this.sideA)*(this.s-this.sideB)*(this.s-this.sideC))
+	};
+}	
+
+class EqTriangle extends Triangle{
+	constructor(side){
+		super(side, side, side);
+	}
+}
+
+var t1 = new Triangle(2, 4, 3)
+var t2 = new EqTriangle(5)
+console.log(t1.s)
+console.log(t1.area)
+// console.log(t2.area)
+
+
+</script>
